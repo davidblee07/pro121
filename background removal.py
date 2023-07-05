@@ -14,7 +14,7 @@ camera.set(4 , 480)
 mountain = cv2.imread('mount everest.jpg')
 
 # redimensionando a imagem da montanha como 640 X 480
-cv2.resize(mountain, (640,480))
+mountain = cv2.resize(mountain, (640,480))
 
 while True:
 
@@ -47,7 +47,7 @@ while True:
         final_image = np.where(person  ==  0 , mountain , person)
 
         # exiba-a
-        cv2.imshow('quadro' , frame)
+        cv2.imshow('quadro' , final_image)
 
         # espera de 1ms antes de exibir outro quadro
         code = cv2.waitKey(1)
